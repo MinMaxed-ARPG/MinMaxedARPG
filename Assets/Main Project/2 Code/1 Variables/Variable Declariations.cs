@@ -3,33 +3,31 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
-    public float AttackSkillLevel { get; protected set; } = 0f;
     // public float { get; protected set; }
-
     ///--Offensive
     ///-Attacks
-    //public float AttackSkillLevel { get; protected set; } = 0f;
+    public float AttackSkillLevel { get; protected set; } = 0f;
     public float AttackSpeed { get; protected set; } = 1f;
-    public float AttackDamageIncrease { get; protected set; } = 1f;
-    public float AttackDamageMultiplier { get; protected set; } = 1f;
+    public float AttackDamageIncrease { get; protected set; } = 0f;
+    public float AttackDamageMultiplier { get; protected set; } = 0f;
     ///-Spells
     public float SpellSkillLevel { get; protected set; } = 0f;
     public float CastSpeed { get; protected set; } = 1f;
-    public float SpellDamageIncrease { get; protected set; } = 1f;
-    public float SpellDamageMultiplier { get; protected set; } = 1f;
+    public float SpellDamageIncrease { get; protected set; } = 0f;
+    public float SpellDamageMultiplier { get; protected set; } = 0f;
     ///-Generic Offensive
     public float AllSkillLevel { get; protected set; } = 0f;
     public float SupportSkillLevel { get; protected set; } = 0f;
     //Critical chance will be generic for both spells and attacks
-    public float criticalChance { get; protected set; } = 1f;
-    public float criticalMultiplier { get; protected set; } = 1f;
+    public float criticalChance { get; protected set; } = 0f;
+    public float criticalMultiplier { get; protected set; } = 0f;
     //Damageovertime
-    public float DamageOverTimeIncrease { get; protected set; } = 1f;
-    public float DamageOverTimeMultiplier { get; protected set; } = 1f;
+    public float DamageOverTimeIncrease { get; protected set; } = 0f;
+    public float DamageOverTimeMultiplier { get; protected set; } = 0f;
 //This affects the rate that damage over time ticks Default is 1 second
 public float DamageOverTimeDuration { get; protected set; } = 1f;
-    public float DamageOverTimeRateIncrease { get; protected set; } = 1f;
-    public float DamageOverTimeRateIncreaseMultiplier { get; protected set; } = 1f;
+    public float DamageOverTimeRateIncrease { get; protected set; } = 0f;
+    public float DamageOverTimeRateIncreaseMultiplier { get; protected set; } = 0f;
     public float DamageOverTimeRateTotal { get; protected set; } = 0f;
     //This resolves and removes the amount of damage that would've been dealt over a duration and deals it instantaneously 
     public float DamageOverTimeResolutionDuration { get; protected set; } = 0f;
@@ -40,11 +38,11 @@ public float DamageOverTimeDuration { get; protected set; } = 1f;
     public float PhysicalDamageFlat { get; protected set; } = 0f;
     public float PhysicalDamageFlatMin { get; protected set; } = 0f;
     public float PhysicalDamageFlatMax { get; protected set; } = 0f;
-    public float PhysicalDamageIncrease { get; protected set; } = 1f;
-    public float PhysicalDamageMultiplier { get; protected set; } = 1f;
+    public float PhysicalDamageIncrease { get; protected set; } = 0f;
+    public float PhysicalDamageMultiplier { get; protected set; } = 0f;
     public float PhysicalDamageOverTime { get; protected set; } = 0f;
-    public float PhysicalDamageOverTimeIncrease { get; protected set; } = 1f;
-    public float PhysicalDamageOverTimeMultiplier { get; protected set; } = 1f;
+    public float PhysicalDamageOverTimeIncrease { get; protected set; } = 0f;
+    public float PhysicalDamageOverTimeMultiplier { get; protected set; } = 0f;
     //This is how much Physical damage over time you'll deal 
     public float PhysicalDamageOverTimeRateTotal { get; protected set; } = 0f;
     //This is for Total Physical damage over time calculations
@@ -61,18 +59,18 @@ public float DamageOverTimeDuration { get; protected set; } = 1f;
     public float ElementalDamageFlat { get; protected set; } = 0f;
     public float ElementalDamageFlatMin { get; protected set; } = 0f;
     public float ElementalDamageFlatMax { get; protected set; } = 0f;
-    public float ElementalDamageIncrease { get; protected set; } = 1f;
-    public float ElementalDamageMultiplier { get; protected set; } = 1f;
+    public float ElementalDamageIncrease { get; protected set; } = 0f;
+    public float ElementalDamageMultiplier { get; protected set; } = 0f;
     ///Fire
     public float FireSkillLevel { get; protected set; } = 0f;
     public float FireDamageFlat { get; protected set; } = 0f;
     public float FireDamageFlatMin { get; protected set; } = 0f;
     public float FireDamageFlatMax { get; protected set; } = 0f;
-    public float FireDamageIncrease { get; protected set; } = 1f;
-    public float FireDamageMultiplier { get; protected set; } = 1f;
+    public float FireDamageIncrease { get; protected set; } = 0f;
+    public float FireDamageMultiplier { get; protected set; } = 0f;
     public float FireDamageOverTime { get; protected set; } = 0f;
-    public float FireDamageOverTimeIncrease { get; protected set; } = 1f;
-    public float FireDamageOverTimeMultiplier { get; protected set; } = 1f;
+    public float FireDamageOverTimeIncrease { get; protected set; } = 0f;
+    public float FireDamageOverTimeMultiplier { get; protected set; } = 0f;
     //This is how much Fire damage over time you'll deal 
     public float FireDamageOverTimeRateTotal { get; protected set; } = 0f;
     //This is for Total Fire damage over time calculations
@@ -90,11 +88,11 @@ public float DamageOverTimeDuration { get; protected set; } = 1f;
     public float ColdDamageFlat { get; protected set; } = 0f;
     public float ColdDamageFlatMin { get; protected set; } = 0f;
     public float ColdDamageFlatMax { get; protected set; } = 0f;
-    public float ColdDamageIncrease { get; protected set; } = 1f;
-    public float ColdDamageMultiplier { get; protected set; } = 1f;
+    public float ColdDamageIncrease { get; protected set; } = 0f;
+    public float ColdDamageMultiplier { get; protected set; } = 0f;
     public float ColdDamageOverTime { get; protected set; } = 0f;
-    public float ColdDamageOverTimeIncrease { get; protected set; } = 1f;
-    public float ColdDamageOverTimeMultiplier { get; protected set; } = 1f;
+    public float ColdDamageOverTimeIncrease { get; protected set; } = 0f;
+    public float ColdDamageOverTimeMultiplier { get; protected set; } = 0f;
     //This is how much Cold damage over time you'll deal 
     public float ColdDamageOverTimeRateTotal { get; protected set; } = 0f;
     //This is for Total Cold damage over time calculations
@@ -112,8 +110,8 @@ public float DamageOverTimeDuration { get; protected set; } = 1f;
     public float LightningDamageFlat { get; protected set; } = 0f;
     public float LightningDamageFlatMin { get; protected set; } = 0f;
     public float LightningDamageFlatMax { get; protected set; } = 0f;
-    public float LightningDamageIncrease { get; protected set; } = 1f;
-    public float LightningDamageMultiplier { get; protected set; } = 1f;
+    public float LightningDamageIncrease { get; protected set; } = 0f;
+    public float LightningDamageMultiplier { get; protected set; } = 0f;
     public float LightningDamageHitTotal { get; protected set; } = 0f;
     //This is for total Lightning damage display and calculations
     public float LightningDamageTotal { get; protected set; } = 0f;
@@ -121,34 +119,34 @@ public float DamageOverTimeDuration { get; protected set; } = 1f;
     public float LightningDamageTotalNet { get; protected set; } = 0f;
     ///Minions
     public float MinionLife { get; protected set; } = 0f;
-    public float MinionLifeIncrease { get; protected set; } = 1f;
-    public float MinionLifeMultiplier { get; protected set; } = 1f;
+    public float MinionLifeIncrease { get; protected set; } = 0f;
+    public float MinionLifeMultiplier { get; protected set; } = 0f;
     public float MinionAttackSpeed { get; protected set; } = 1f;
     public float MinionCastSpeed { get; protected set; } = 1f;
     public float MinionCriticalChance { get; protected set; } = 1f;
-    public float MinionCriticalMultiplier { get; protected set; } = 1f;
-    public float MinionMovementSpeedFlat { get; protected set; } = 0f;
-    public float MinionMovementSpeedIncrease { get; protected set; } = 1f;
-    public float MinionMovementSpeedMultiplier { get; protected set; } = 1f;
+    public float MinionCriticalMultiplier { get; protected set; } = 0f;
+    public float MinionMovementSpeedFlat { get; protected set; } = 1f;
+    public float MinionMovementSpeedIncrease { get; protected set; } = 0f;
+    public float MinionMovementSpeedMultiplier { get; protected set; } = 0f;
 
     ///--Defensive
     ///-Generic Defensive
-    public float DefensesIncrease { get; protected set; } = 1f;
-    public float DefensesMultiplier { get; protected set; } = 1f;
+    public float DefensesIncrease { get; protected set; } = 0f;
+    public float DefensesMultiplier { get; protected set; } = 0f;
     public float DamageReductionFlat { get; protected set; } = 0f;
-    public float DamageReductionIncrease { get; protected set; } = 1f;
-    public float DamageReductionMultiplier { get; protected set; } = 1f;
+    public float DamageReductionIncrease { get; protected set; } = 0f;
+    public float DamageReductionMultiplier { get; protected set; } = 0f;
     //Evasion Capped at 60% chance to evade attacks & spells
     public float EvasionFlat { get; protected set; } = 0f;
-    public float EvasionIncrease { get; protected set; } = 1f;
-    public float EvasionMultiplier { get; protected set; } = 1f;
+    public float EvasionIncrease { get; protected set; } = 0f;
+    public float EvasionMultiplier { get; protected set; } = 0f;
     //amount of times evasion chance is rolled
     public float EvasionLucky { get; protected set; } = 0f;
     //Block Soft-Capped at 60% chance to block attacks & Spells
     public float AttackBlockFlat { get; protected set; } = 0f;
-    public float AttackBlockIncrease { get; protected set; } = 1f;
+    public float AttackBlockIncrease { get; protected set; } = 0f;
     public float SpellBlockFlat { get; protected set; } = 0f;
-    public float SpellBlockIncrease { get; protected set; } = 1f;
+    public float SpellBlockIncrease { get; protected set; } = 0f;
     //This is the max chance to block attacks & spells default 60%
     public float BlockRatio { get; protected set; } = 1f;
     //Amount of times block chance is rolled
@@ -157,37 +155,37 @@ public float DamageOverTimeDuration { get; protected set; } = 1f;
     public float SpellBlockLucky { get; protected set; } = 0f;
     //Life
     public float LifeFlat { get; protected set; } = 0f;
-    public float LifeIncrease { get; protected set; } = 1f;
-    public float LifeMultiplier { get; protected set; } = 1f;
+    public float LifeIncrease { get; protected set; } = 0f;
+    public float LifeMultiplier { get; protected set; } = 0f;
     public float LifeRecoupFlat { get; protected set; } = 0f;
-    public float LifeRecoupIncrease { get; protected set; } = 1f;
-    public float LifeRecoupMultiplier { get; protected set; } = 1f;
+    public float LifeRecoupIncrease { get; protected set; } = 0f;
+    public float LifeRecoupMultiplier { get; protected set; } = 0f;
     public float LifeStealFlat { get; protected set; } = 0f;
     public float LifeStealPercent { get; protected set; } = 0f;
-    public float LifeStealIncrease { get; protected set; } = 1f;
-    public float LifeStealMultiplier { get; protected set; } = 1f;
+    public float LifeStealIncrease { get; protected set; } = 0f;
+    public float LifeStealMultiplier { get; protected set; } = 0f;
     public float LifeRegenFlat { get; protected set; } = 0f;
     public float LifeRegenPercent { get; protected set; } = 1f;
-    public float LifeRegenIncrease { get; protected set; } = 1f;
-    public float LifeRegenMultiplier { get; protected set; } = 1f;
+    public float LifeRegenIncrease { get; protected set; } = 0f;
+    public float LifeRegenMultiplier { get; protected set; } = 0f;
     //Energyshield
     public float EnergyShieldFlat { get; protected set; } = 0f;
-    public float EnergyShieldIncrease { get; protected set; } = 1f;
-    public float EnergyShieldMultiplier { get; protected set; } = 1f;
+    public float EnergyShieldIncrease { get; protected set; } = 0f;
+    public float EnergyShieldMultiplier { get; protected set; } = 0f;
     public float EnergyShieldLeechFlat { get; protected set; } = 0f;
     public float EnergyShieldLeechPercent { get; protected set; } = 1f;
-    public float EnergyShieldLeechIncrease { get; protected set; } = 1f;
-    public float EnergyShieldLeechMultiplier { get; protected set; } = 1f;
+    public float EnergyShieldLeechIncrease { get; protected set; } = 0f;
+    public float EnergyShieldLeechMultiplier { get; protected set; } = 0f;
     public float EnergyShieldRechargeInterval { get; protected set; } = 1f;
-    public float EnergyShieldRechargeIntervalIncrease { get; protected set; } = 1f;
-    public float EnergyShieldRechargeIntervalMultiplier { get; protected set; } = 1f;
+    public float EnergyShieldRechargeIntervalIncrease { get; protected set; } = 0f;
+    public float EnergyShieldRechargeIntervalMultiplier { get; protected set; } = 0f;
     public float EnergyShieldRechargeSpeed { get; protected set; } = 1f;
-    public float EnergyShieldRechargeSpeedIncrease { get; protected set; } = 1f;
-    public float EnergyShieldRechargeSpeedMultiplier { get; protected set; } = 1f;
+    public float EnergyShieldRechargeSpeedIncrease { get; protected set; } = 0f;
+    public float EnergyShieldRechargeSpeedMultiplier { get; protected set; } = 0f;
     //Armor Rating
     public float ArmorFlat { get; protected set; } = 0f;
-    public float ArmorIncrease { get; protected set; } = 1f;
-    public float ArmorMultiplier { get; protected set; } = 1f;
+    public float ArmorIncrease { get; protected set; } = 0f;
+    public float ArmorMultiplier { get; protected set; } = 0f;
     //Resistance
     public float FireResistanceIncrease { get; protected set; } = 0f;
     public float FireResistanceTotal { get; protected set; } = 0f;
@@ -197,7 +195,7 @@ public float DamageOverTimeDuration { get; protected set; } = 1f;
     public float LightningResistanceTotal { get; protected set; } = 0f;
     ///--Passive
     public float PassiveSkillLevel { get; protected set; } = 0f;
-    public float AuraEffectIncrease { get; protected set; } = 1f;
+    public float AuraEffectIncrease { get; protected set; } = 0f;
     public float AuraEffectTotal { get; protected set; } = 0f;
     ///--Buffs
     //Harden Base 5% Damage reduction per stack of hardened the base max is 3
@@ -227,20 +225,20 @@ public float DamageOverTimeDuration { get; protected set; } = 1f;
     ///--Misc
     //Cooldown Recovery
     public float CooldownRecoveryFlat { get; protected set; } = 0f;
-    public float CooldownRecoveryIncrease { get; protected set; } = 1f;
-    public float CooldownRecoveryMultiplier { get; protected set; } = 1f;
+    public float CooldownRecoveryIncrease { get; protected set; } = 0f;
+    public float CooldownRecoveryMultiplier { get; protected set; } = 0f;
     //Area of effect
     public float SkillAoE { get; protected set; } = 1f;
-    public float SkillAoEIncrease { get; protected set; } = 1f;
-    public float SkillAoEMultiplier { get; protected set; } = 1f;
+    public float SkillAoEIncrease { get; protected set; } = 0f;
+    public float SkillAoEMultiplier { get; protected set; } = 0f;
     //Mana
     public float Mana { get; protected set; } = 1f;
-    public float ManaIncrease { get; protected set; } = 1f;
-    public float ManaMultiplier { get; protected set; } = 1f;
+    public float ManaIncrease { get; protected set; } = 0f;
+    public float ManaMultiplier { get; protected set; } = 0f;
     public float ManaRegenFlat { get; protected set; } = 0f;
     public float ManaRegenPercent { get; protected set; } = 1f;
-    public float ManaRegenIncrease { get; protected set; } = 1f;
-    public float ManaRegenMultiplier { get; protected set; } = 1f;
+    public float ManaRegenIncrease { get; protected set; } = 0f;
+    public float ManaRegenMultiplier { get; protected set; } = 0f;
     //Movementspeed
     public float MovementSpeedFlat { get; protected set; }
     public float MovementSpeedIncrease { get; protected set; }
