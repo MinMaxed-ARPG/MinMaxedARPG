@@ -115,6 +115,17 @@ public float LightningDamageHitTotal { get; protected set; }
 public float LightningDamageTotal { get; protected set; }
 //This is to print damage after monster resistance reduction at the end of calculations
 public float LightningDamageTotalNet { get; protected set; }
+///Minions
+public float MinionLife  { get; protected set; }
+public float MinionLifeIncrease  { get; protected set; }
+public float MinionLifeMultiplier { get; protected set; }
+public float MinionAttackSpeed  { get; protected set; }
+public float MinionCastSpeed  { get; protected set; }
+public float MinionCriticalChance  { get; protected set; }
+public float MinionCriticalMultiplier  { get; protected set; }
+public float MinionMovementSpeedFlat { get; protected set; }
+public float MinionMovementSpeedIncrease { get; protected set; }
+public float MinionMovementSpeedMultiplier { get; protected set; }
 ///--Defensive
 ///-Generic Defensive
 public float DefensesIncrease { get; protected set; }
@@ -275,4 +286,4 @@ else
     // do nothing - target not shocked
     // shockTotal would be 1.0 (no effec	t)
 }
-#endif 
+#endif
